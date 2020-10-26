@@ -24,18 +24,16 @@ class SearchBar extends React.Component{
                         //onChange se ejecuta cada  ez que el usuarioo modifica allgo en el input
                         //onChange recibe un callback con el evento y asi saber el valor del input
                         // cada vez que el usaurio teclea algo en el input lo guardamos en el estado
-
+                        
                         this.setState({search: event.target.value})
-
                     }}
                 ></input>
-                <button 
+                <button
                     className="search-button"
                     onClick={() => this.props.emitSearch(this.state.search)}
                     //this.sendSearch() asi lo ejecutaria el padre
                 >Buscar</button>
             </div>
-            
         )
     }
 }
